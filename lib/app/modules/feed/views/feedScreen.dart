@@ -66,15 +66,25 @@ class feedScreen extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 8.0),
-                      child: Text(
-                        "Does regular application of make-up damage my skin?",
-                        style: TextStyle(
-                          fontWeight: FontWeight.w400,
-                          fontSize: 20,
-                        ),
-                      ),
-                    ),
+                        padding: const EdgeInsets.only(top: 8.0),
+                        child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "What is error in this code?",
+                              style: TextStyle(
+                                fontWeight: FontWeight.w400,
+                                fontSize: 20,
+                              ),
+                            ),
+                            Container(
+                              margin: EdgeInsets.only(top: 15.0),
+                              child: Image(
+                                image: AssetImage("assets/images/result.png"),
+                              ),
+                            )
+                          ],
+                        )),
                     Padding(
                       padding: const EdgeInsets.only(top: 8.0),
                       child: Row(
