@@ -1,84 +1,29 @@
 import 'package:flutter/material.dart';
 import 'package:questry/app/constants/colors.dart';
-import 'package:questry/app/global_widgets/drawer.dart';
 import 'package:questry/app/modules/feed/views/pages/comment_section.dart';
 
-class feedScreen extends StatelessWidget {
+class postScreen extends StatelessWidget {
   final String questionStmt;
   final String time;
   final int noOfResponses;
 
-  const feedScreen({Key key, this.questionStmt, this.time, this.noOfResponses})
+  const postScreen({Key key, this.questionStmt, this.time, this.noOfResponses})
       : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey[200],
       appBar: AppBar(
-        elevation: 0,
         backgroundColor: primaryColor,
-        title: Text(
-          'Questry',
-          style: Theme.of(context).textTheme.headline6,
-        ),
-        actions: [
-          Container(
-            width: 45,
-            height: 45,
-            decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(
-                    color: Colors.white, style: BorderStyle.solid, width: 2.0),
-                image: DecorationImage(
-                    image: NetworkImage(
-                        "https://images.unsplash.com/photo-1544005313-94ddf0286df2?ixid=MnwxMjA3fDB8MHxzZWFyY2h8OXx8cGVyc29ufGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"))),
-          ),
-        ],
+        title: Text("My Posts",
+            style: TextStyle(
+              color: Colors.white,
+              fontFamily: "Raleway",
+            )),
       ),
-      drawer: mainDrawer(),
       body: SafeArea(
         child: ListView(
           children: [
-            Stack(
-              children: <Widget>[
-                Container(
-                  height: 70.0,
-                  width: double.infinity,
-                  color: primaryColor,
-                ),
-                Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: <Widget>[
-                    Padding(
-                      padding: EdgeInsets.only(left: 15.0, right: 15.0),
-                      child: Container(
-                        margin: EdgeInsets.symmetric(vertical: 10),
-                        width: double.infinity,
-                        decoration: BoxDecoration(
-                          color: Color(0xFFF5F5F7),
-                          borderRadius: BorderRadius.circular(40),
-                        ),
-                        child: ListTile(
-                          leading: Icon(
-                            Icons.search,
-                          ),
-                          title: TextField(
-                            decoration: InputDecoration(
-                                hintText: "search for anything",
-                                hintStyle: TextStyle(
-                                  fontSize: 18,
-                                  color: Color(0xFFA0A5BD),
-                                ),
-                                border: InputBorder.none),
-                          ),
-                        ),
-                      ),
-                    ),
-                  ],
-                )
-              ],
-            ),
             Card(
               margin: EdgeInsets.all(10.0),
               elevation: 1,
@@ -164,8 +109,11 @@ class feedScreen extends StatelessWidget {
                     Row(
                       children: [
                         CircleAvatar(
-                          backgroundImage: NetworkImage(
-                              "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fHBlcnNvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),
+                          backgroundColor: Colors.grey,
+                          child: Icon(
+                            Icons.person,
+                            color: Colors.white,
+                          ),
                         ),
                         Padding(
                           padding: const EdgeInsets.only(left: 8.0),
@@ -300,8 +248,11 @@ class feedScreen extends StatelessWidget {
               tileColor: Colors.grey.shade300,
               leading: CircleAvatar(
                 backgroundColor: Colors.grey,
-                backgroundImage: NetworkImage(
-                    "https://images.unsplash.com/photo-1544723795-3fb6469f5b39?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDN8fHBlcnNvbnxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60"),
+                child: Icon(
+                  Icons.person,
+                  color: Colors.white,
+                  size: 30,
+                ),
               ),
               title: Padding(
                 padding: const EdgeInsets.all(8.0),

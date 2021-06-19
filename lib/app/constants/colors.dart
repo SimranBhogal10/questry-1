@@ -8,3 +8,5 @@ const Color tealLight = Color.fromRGBO(68, 55, 245, 0.1);
 
 const Color circleTealLight = Color.fromRGBO(68, 55, 245, 0.70);
 const Color circleTealDark = Color.fromRGBO(68, 55, 200, 1);
+
+const Color primaryColor = Color(0xff2e3b5b);

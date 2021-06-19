@@ -7,6 +7,7 @@ import 'package:questry/app/modules/feed/views/pages/comment_section.dart';
 import 'package:questry/app/modules/home/home_page.dart';
 
 import 'app/modules/feed/views/feedScreen.dart';
+import 'app/modules/profile/views/profile_page.dart';
 
 void main() {
   runApp(myApp());
@@ -17,7 +18,17 @@ class myApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
-      home: SignInPage(),
+      theme: ThemeData(
+          primaryColor: Color(0xff2e3b5b),
+          accentColor: Color(0xff2e3b5b),
+          fontFamily: 'Raleway',
+          textTheme: ThemeData.light().textTheme.copyWith(
+              headline6: TextStyle(
+                  fontSize: 30,
+                  color: Colors.white,
+                  fontFamily: 'RobotoCondensed',
+                  fontWeight: FontWeight.bold))),
+      home: ProfilePage(),
     );
   }
 }
