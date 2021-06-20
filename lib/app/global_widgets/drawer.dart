@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:questry/app/constants/colors.dart';
 import 'package:questry/app/modules/profile/views/pages/posts.dart';
 
 class mainDrawer extends StatelessWidget {
@@ -30,7 +31,7 @@ class mainDrawer extends StatelessWidget {
             width: double.infinity,
             padding: EdgeInsets.all(20),
             alignment: Alignment.centerLeft,
-            color: Theme.of(context).accentColor,
+            color: primaryColor,
             child: Container(
               width: double.infinity,
               height: 180,
